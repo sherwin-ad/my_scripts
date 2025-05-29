@@ -1,0 +1,32 @@
+- name: Create MySQL database
+  hosts: denr
+  become: yes
+  vars:
+    db_name: denr_fmb_db
+    db_user: denr-fmb-acc
+    db_password: L.1,tbs)6X)EsF1O&A=[q
+
+  tasks:
+  - name: Install MySQL Python package
+    apt:
+      name: python-mysqldb
+      state: present
+    become: yes
+    become_user: root
+
+  - name: Create MySQL database
+    mysql_db:
+      name: "{{ db_name }}"
+      state: present
+    become: yes
+    become_user: root
+
+  - name: Create MySQL user
+    mysql_user:
+      name: "{{ db_user }}"
+      password: "{{ db_password }}"
+      priv: "{{ db_name }}.*:ALL"
+      state: present
+      host: localhost
+      become: yes
+      become_user: root
