@@ -22,4 +22,9 @@ print("Difference between dates:", difference.days, "days")
 formatted_date = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
 print("Formatted Date and Time:", formatted_date)
 
+mytext = "My number is"
+mynumber = 42
+
+print(mytext, mynumber)
+
 print(24 * 7)
