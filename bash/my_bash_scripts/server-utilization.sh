@@ -58,4 +58,3 @@ echo "$(uptime | awk -F'load average:' '{ print $2 }')"
 echo
 divider
 echo -e "${GREEN}**** Server Utilization Completed ****${NC}"
-divider
