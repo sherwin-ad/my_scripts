@@ -85,3 +85,78 @@ The command  is a PowerShell command used to restart the Print Spooler service o
 Remove-Item -Path "C:\Windows\Temp\*" -Recurse
 ```
 The command  is a PowerShell command used to delete all files and folders inside the  directory. 
+
+**PowerShell Execution Policy Scopes**
+Execution policies determine the conditions under which PowerShell loads configuration files and runs scripts. 
+
+These policies can be set at different scopes:
+**1. MachinePolicy**
+- Set by Group Policy for all users on the computer.
+- Highest precedence.
+
+**2. UserPolicy**
+- Set by Group Policy for the current user.
+- Second highest precedence.
+
+**3. Process**
+- Applies only to the current PowerShell session.
+- Set using Set-ExecutionPolicy -Scope Process.
+
+**4. CurrentUser**
+- Applies to the current user.
+- Set using Set-ExecutionPolicy -Scope CurrentUser.
+
+**5. LocalMachine**
+- Applies to all users on the computer.
+- Set using Set-ExecutionPolicy -Scope LocalMachine.
+
+```
+Get-ExecutionPolicy -List
+
+        Scope ExecutionPolicy
+        ----- ---------------
+MachinePolicy       Undefined
+   UserPolicy       Undefined
+      Process          Bypass
+  CurrentUser       AllSigned
+ LocalMachine       AllSigned
+```
+
+```
+Test-Path $PROFILE
+False
+```
+will check whether your PowerShell profile script exists at the path stored in $PROFILE.
+What It Does
+- Returns True if the profile file exists.
+- Returns False if it doesn't exist.
+
+If it returns False, you can create the profile file using:
+```
+New-Item -Path $PROFILE -ItemType File -Force
+```
+
+This appends the alias definition to your profile script.
+```
+Add-Content -Path $profile -Value 'Set-Alias ll Get-ChildItem'
+```
+
+Display all the properties of the $PROFILE object
+```
+$profile | Select *
+
+OR 
+
+$PROFILE | Select-Object *
+
+AllUsersAllHosts       : C:\Program Files\PowerShell\7\profile.ps1
+AllUsersCurrentHost    : C:\Program Files\PowerShell\7\Microsoft.PowerShell_profile.ps1
+CurrentUserAllHosts    : C:\Users\sherwinowen\Documents\PowerShell\profile.ps1
+CurrentUserCurrentHost : C:\Users\sherwinowen\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+Length                 : 74
+```
+
+Edit AllUserAllHosts profile
+```
+notepad $profile.AllUsersAllHosts
+```
