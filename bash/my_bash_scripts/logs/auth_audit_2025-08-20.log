@@ -1,0 +1,35 @@
+=== Authentication Audit Report: Wed Aug 20 08:23:20 PST 2025 ===
+
+[Logged-in Users]:
+sherwinowen pts/1        2025-08-15 20:15
+root     pts/4        2025-08-19 11:50
+
+[Login History]:
+reboot   system boot  Fri Aug 15 20:15   still running      5.15.167.4-microsoft-standard-WSL2
+reboot   system boot  Fri Aug 15 09:00   still running      5.15.167.4-microsoft-standard-WSL2
+reboot   system boot  Fri Aug 15 08:51   still running      5.15.167.4-microsoft-standard-WSL2
+reboot   system boot  Wed Aug 13 09:48   still running      5.15.167.4-microsoft-standard-WSL2
+reboot   system boot  Mon Aug 11 17:00   still running      5.15.167.4-microsoft-standard-WSL2
+reboot   system boot  Mon Aug 11 08:19   still running      5.15.167.4-microsoft-standard-WSL2
+reboot   system boot  Fri Aug  8 08:46   still running      5.15.167.4-microsoft-standard-WSL2
+reboot   system boot  Thu Aug  7 14:11   still running      5.15.167.4-microsoft-standard-WSL2
+reboot   system boot  Thu Aug  7 08:20   still running      5.15.167.4-microsoft-standard-WSL2
+reboot   system boot  Wed Aug  6 09:40   still running      5.15.167.4-microsoft-standard-WSL2
+
+[Failed SSH Logins]:
+
+[Sudo Commands Used]:
+2025-08-13T11:04:07.583591+08:00 owen-laptop sudo: pam_unix(sudo:session): session closed for user root
+2025-08-15T09:08:55.778464+08:00 owen-laptop sudo: sherwinowen : TTY=pts/0 ; PWD=/mnt/c/Users/sherwinowen ; USER=root ; COMMAND=/usr/bin/apt install ncdu
+2025-08-15T09:08:55.783971+08:00 owen-laptop sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-08-15T09:09:16.916889+08:00 owen-laptop sudo: pam_unix(sudo:session): session closed for user root
+2025-08-15T09:15:57.178292+08:00 owen-laptop sudo: sherwinowen : TTY=pts/0 ; PWD=/mnt/c/Users/sherwinowen ; USER=root ; COMMAND=/usr/bin/apt install zipcloak
+2025-08-15T09:15:57.191496+08:00 owen-laptop sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-08-15T09:15:59.117360+08:00 owen-laptop sudo: pam_unix(sudo:session): session closed for user root
+2025-08-15T09:17:05.209740+08:00 owen-laptop sudo: sherwinowen : TTY=pts/0 ; PWD=/mnt/c/Users/sherwinowen ; USER=root ; COMMAND=/usr/bin/apt install zip
+2025-08-15T09:17:05.211077+08:00 owen-laptop sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2025-08-15T09:17:32.606256+08:00 owen-laptop sudo: pam_unix(sudo:session): session closed for user root
+
+[Invalid User Attempts]:
+
+[Summary]:
