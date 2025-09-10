@@ -9,6 +9,6 @@ while True:
     # Move the mouse to the random coordinates
     pag.moveTo(x, y,0.5)
     print(f"Moved mouse to: ({x}, {y})")
-    time.sleep(2)  # Wait for 1 second before the next move
+    time.sleep(10)  # Wait for 1 second before the next move
     
     
