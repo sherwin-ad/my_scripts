@@ -1,12 +1,12 @@
 # SMTP Configuration
-$SmtpServer = "3.mailjet.com"
+$SmtpServer = "in-v3.mailjet.com"
 $Port = 587
-$Username = "d057ae726eb25f14fc61fac"
-$Password = "0b8f7421d89a65df188e7e32f"  # Consider using a secure string in production
+$Username = "d057ae729def1cc326eb25f14fc61fac"
+$Password = "0a678a9fb8f7421d89a65df188e7e32f"  # Consider using a secure string in production
 
 # Email Details
 $From = "no-reply@mybusybee.net"
-$To = "sherwin@beesuite.org"
+$To = "sherwin@mybusybeee.net"
 $Subject = "SMTP Test Email"
 $Body = "Hello, this is a test email sent from PowerShell."
 
